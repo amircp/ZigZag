@@ -1,0 +1,11 @@
+
+El indicador zigzag está basado en el gráfico de tipo "linea" y de puntos, los cuales están basados en el cierre.
+Se Mostrará el zigzag basado en los precios de cierre, Barras máximo-Minimo-Cierre, Barras Apertura-Máximo-Mínimo-Cirre y Velas japonesas, las cuales muestran el rango maximo-minimo del periodo,
+mostrarán el zigzag basado en este rango máximo-minimo
+Un zigzag basado en el rango máximo-minimo es más probable que cambie que un zig zag basado en el cierre porque el rango máximo mínmo será mucho más largo y producirá swings más grandes.
+
+La caja de parámetros permite a los chartistas colocar la sensibilidad del zigzag, un zigzag con 5 en la caja de parámetros filtrará todos los movimientos menores a 5%. Un zigzag de 10 filtrará movimientos menores a 10%
+si una acción comerciada tiene una reacción minima de 100 a un maximo de 109 (+9%) no habrá una linea porque el movimiento fue menor a 10%. Si una acción avanza de un minimo de 100 a un máximo de 110 (10%) debería haber
+una linea de 100 a 110. Si una acción continúa a 112, esta linea será extendida a 112 (100 a 112). El zigzag no reversará hasta que la acción caiga 10% o más de su alto. De un alto de 112 una acción deberá tener una
+caída de 11.2 puntos (o a un minimo de 100.8) para garantizar otra linea. El gráfico abajo muestra la linea en QQQQ con un 7% de zigzag, El rebote temprano en junio fue ignorado porque tenía menos del 7%
+(flecha negra). Los dos retrocesos en Julio fueron ignorados porque tenian mucho menos del 7% (flechas rojas)

@@ -1,0 +1,35 @@
+
+MinMax = (High[i] < L[i - 1]) ? L[i] : H[i];
+
+
+if(MinMax[i] < MinMax[i-1])
+{
+    if(MinMax[i+1] < MinMax[i])
+    {
+
+
+    }
+    else
+    {
+        if(ABS(porcentaje) > filtro)
+        {
+            Zigzag = MinMax[i]
+        }
+
+    }
+} else
+{
+    if(MinMax[i+1] > MinMax[i])
+    {
+
+
+    }
+    else
+    {
+
+        if(ABS(porcentaje) > filtro)
+        {
+            ZigZag = MinMax[i]
+        }
+    }
+}

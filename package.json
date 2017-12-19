@@ -1,0 +1,22 @@
+{
+  "name": "blackbird",
+  "version": "1.0.0",
+  "description": "Algorithmic trading for Forex and Stocks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "trading",
+    "algoritmn",
+    "forex",
+    "bmv",
+    "stock",
+    "market"
+  ],
+  "author": "Amir Canto",
+  "license": "ISC",
+  "dependencies": {
+    "fast-csv": "^2.4.1"
+  }
+}
