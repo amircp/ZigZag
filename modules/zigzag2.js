@@ -18,7 +18,7 @@ let ZigZag = function(){
             let base = 0;
 
                 // Recorremos todo el array de quotes de 0 hasta el MAX_QUOTES
-                for (let i = obsStart; i < quotes.length - 1; i++)
+                for (let i = obsStart; i < quotes.length -1 ; i++)
                 {
 
                     MinMax.push((quotes[i].High < quotes[((i - 1 < 0) ? 0 : (i-1))].High) ? quotes[i].Low : quotes[i].High);
@@ -65,17 +65,17 @@ let ZigZag = function(){
                         }
                         if(zigZag_[i] == undefined)
                         {
-                            console.log(quotes[i].Date+','+quotes[i].Open+','+quotes[i].High+','+quotes[i].Low+','+ quotes[i].Close+','+base);
+                           // console.log(quotes[i].Date+','+quotes[i].Open+','+quotes[i].High+','+quotes[i].Low+','+ quotes[i].Close+','+ MinMax[i]);
                         }
                         else
                         {
-                              console.log(quotes[i].Date+','+quotes[i].Open+','+quotes[i].High+','+quotes[i].Low+','+ quotes[i].Close+','+zigZag_[i]);
+                         //     console.log(quotes[i].Date+','+quotes[i].Open+','+quotes[i].High+','+quotes[i].Low+','+ quotes[i].Close+','+zigZag_[i]+ ', ZigZag');
 
                         }
 
                     }
 
-
+                                    console.log(quotes[i].Date+','+quotes[i].Open+','+quotes[i].High+','+quotes[i].Low+','+ quotes[i].Close+','+ MinMax[i]);
 
                 }
 
