@@ -21,7 +21,7 @@ let csvStream = csv
 
         // Aqui empezamos a trabajar con el ZigZag
 
-        let ZigZag = require(__dirname +'/modules/zigzag3');
+        let ZigZag = require(__dirname +'/modules/zigzag-hl');
         ZigZag.calculate(quotes, 2, (err, data) => {
                // console.log(data);
         });
