@@ -1,7 +1,7 @@
 {
-  "name": "blackbird",
+  "name": "ZigZag",
   "version": "1.0.0",
-  "description": "Algorithmic trading for Forex and Stocks",
+  "description": "ZigZag Indicator for Forex and Stocks",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -19,11 +19,11 @@ let csvStream = csv
     })
     .on("end", () =>{
 
-        // Aqui empezamos a trabajar con el ZigZag
-
-        let ZigZag = require(__dirname +'/modules/zigzag-hl');
+        // Here goes ZigZag Module:
+        let ZigZag = require(__dirname +'/modules/zigzag');
         ZigZag.calculate(quotes, 2, (err, data) => {
-               // console.log(data);
+            // Returns an array with ZZ data.
+               console.log(data);
         });
 
 

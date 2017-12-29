@@ -1,6 +1,11 @@
 let ZigZag = function(){
 
-
+/*************************************************************************
+ *
+ *  Implementación de archivo de excel encontrado en excelforums.com
+ *  Autor: Amir Canto
+ *  Fecha: 25/Dic/2017
+ ************************************************************************/
     function removeDateDots_(date)
     {
         date = date.replace('.','/');
@@ -30,31 +35,41 @@ let ZigZag = function(){
             {
                 // Obtenemos el promedio de la cotización alta y máxima
                 pointQuote = (parseFloat(quotes[i].High) + parseFloat(quotes[i].Low)) / 2;
-                console.log(pointQuote);    
+               // console.log('-------------------------------------');
+                //console.log('Point:'+pointQuote);
                 // Inicializamos la diferencia acumulada y la Base
-                if(undefined == quotes[i -1] &&  undefined == quotes[i - 1])
+                if(undefined == quotes[i -1])
                 {
                     Base = parseFloat(pointQuote);
-                    diffAccumulated += parseFloat(0);     
+
+                    diffAccumulated += parseFloat(0);
+                  //  console.log('Diff:'+ diffAccumulated);
+
                 }
-                else 
+                else
                 {
-                    diffAccumulated += Math.abs((pointQuote / Base) * 100);
+               //     console.log('Diferencia Acumulada:'+ diffAccumulated);
+                 //   console.log('Cambio porcentual Diario:'+parseFloat(((pointQuote - Base)  / Base) * 100));
+                    diffAccumulated =  parseFloat(((pointQuote - Base)  / Base) * 100);
+                    //console.log('Base actual:'+ Base);
+
 
                 }
                 // llamamos a la funcion para eliminar puntos de la fecha (Only works with investing.com historical data)
                 dateQuote = removeDateDots_(quotes[i].Date);
-                
-
-                if(diffAccumulated > minSwingPct)
+                 if(Math.abs(parseFloat(diffAccumulated)) >= parseFloat(minSwingPct))
                 {
 
-                    console.log(diffAccumulated);
                     diffAccumulated = 0.0;
                     Base = pointQuote;
+                    console.log(quotes[i].Date + ',' + quotes[i].Open + ',' + quotes[i].High + ','+ quotes[i].Low+','+ quotes[i].Close + ','+ Base);
                     zigZag_.push(Base);
                 }
-        
+                else
+                {
+                   console.log(quotes[i].Date + ',' + quotes[i].Open + ',' + quotes[i].High + ','+ quotes[i].Low+','+ quotes[i].Close + ',');
+                }
+
 
             }
 
