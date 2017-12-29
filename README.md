@@ -32,7 +32,7 @@ Modify the index.js line 4
 ```
 let stream = fs.createReadStream(historicalData + "/MXN/USDMXN.csv");
 ```
-(TODO: create a better way to choose historical data and automated download)
+
 
 
 
@@ -111,7 +111,7 @@ after it you will get the ZigZag data:
 ## TODO
 
 * Currently the main ZigZag module it's incomplete. it lacks of Depth and Deviation. 
-
+* Create a better way to choose historical data and automated download
 
 ## Authors
 
