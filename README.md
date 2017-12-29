@@ -108,6 +108,10 @@ after it you will get the ZigZag data:
   
 ```
 
+## TODO
+
+* Currently the main ZigZag module it's incomplete. it lacks of Depth and Deviation. 
+
 
 ## Authors
 
